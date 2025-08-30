@@ -14,7 +14,7 @@ public class PassFailExam extends PassFailActivtiy{
     private int numMissed;
 
     public PassFailExam(int numQuestions, int numMissed, double minPointsEach) {
-        super();
+        super(minPointsEach);
         this.numQuestions = numQuestions;
         this.pointsEach = 100.0 / numQuestions;
         this.numMissed = numMissed;
@@ -22,7 +22,6 @@ public class PassFailExam extends PassFailActivtiy{
     }
 
     public double getPointsEach() {
-
         return pointsEach;
     }
 
