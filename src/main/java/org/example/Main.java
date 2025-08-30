@@ -11,7 +11,6 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         //-------- Task 2 --------
-        System.out.print("-------- Task 2 --------");
         System.out.print("How many questions are on the final exam? ");
         int finalScore = Integer.parseInt(input.nextLine());
         System.out.print("How many questions did the student miss? ");
@@ -23,7 +22,6 @@ public class Main {
         System.out.printf("The exam grade is %s \n", exam1.getGrade());
 
         //------- Task 3 --------
-        System.out.print("------- Task 3 --------");
         System.out.print("How many questions are on the final exam? ");
         int finalScore1 = Integer.parseInt(input.nextLine());
         System.out.print("How many questions did the student miss? ");
@@ -35,5 +33,21 @@ public class Main {
         System.out.printf("Each question counts %.1f points. \n", exam2.getPointsEach());
         System.out.printf("The exam score is %.1f \n", exam2.getscore());
         System.out.printf("The exam grade is %s \n", exam2.getGrade());
+
+        //------- Task 4 --------
+        System.out.print("Term paper: \n");
+        System.out.print("Grammar points: ");
+        double grammerPts = Double.parseDouble(input.nextLine());
+        System.out.print("Spelling points: ");
+        double spellingPts = Double.parseDouble(input.nextLine());
+        System.out.print("Length points: ");
+        double lengthPts= Double.parseDouble(input.nextLine());
+        System.out.print("Content points: ");
+        double contentPts = Double.parseDouble(input.nextLine());
+
+        Essay essay = new Essay();
+        essay.setScore(grammerPts, spellingPts, lengthPts, contentPts);
+        System.out.print("Total points: " + essay.getscore() + "\n");
+        System.out.print("Grade: " + essay.getGrade());
     }
 }

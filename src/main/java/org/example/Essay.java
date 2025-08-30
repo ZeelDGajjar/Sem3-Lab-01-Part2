@@ -7,10 +7,8 @@ public class Essay extends GradedActivity {
     private double content;
 
     public void setScore(double grammer, double spelling, double correctLength, double content) {
-        this.grammer = grammer;
-        this.spelling = spelling;
-        this.correctLength = correctLength;
-        this.content = content;
+        double score = this.grammer + this.spelling + this.correctLength + this.content;
+        super.setScore(score);
     }
 
     public void setGrammer(double grammer) {
@@ -42,6 +40,6 @@ public class Essay extends GradedActivity {
     }
 
     public double getScore() {
-        return this.grammer + this.spelling + this.correctLength + this.content;
+        return super.getscore();
     }
 }
