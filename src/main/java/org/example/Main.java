@@ -49,5 +49,8 @@ public class Main {
         essay.setScore(grammerPts, spellingPts, lengthPts, contentPts);
         System.out.print("Total points: " + essay.getscore() + "\n");
         System.out.print("Grade: " + essay.getGrade());
+
+        //------- Task 5 --------
+
     }
 }
