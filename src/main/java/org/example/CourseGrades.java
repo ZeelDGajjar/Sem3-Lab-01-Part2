@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Arrays;
 
-public class CourseGrades {
+public class CourseGrades implements Analyzable {
     private GradedActivity[] grades;
     private final int NUM_GRADES = 4;
 
@@ -43,5 +43,36 @@ public class CourseGrades {
                 "Final Exam Score:", grades[3].getScore(), grades[3].getGrade()));
 
         return sb.toString();
+    }
+
+    @Override
+    public double getAverage() {
+        double sum = 0;
+        for (GradedActivity gradedActivity : grades) {
+                sum += gradedActivity.getScore();
+        }
+        return sum / NUM_GRADES;
+    }
+
+    @Override
+    public GradedActivity getHighest() {
+        GradedActivity highest = null;
+        for (GradedActivity gradedActivity : grades) {
+            if (gradedActivity.getScore() > highest.getScore()) {
+                highest = gradedActivity;
+            }
+        }
+        return highest;
+    }
+
+    @Override
+    public GradedActivity getLowest() {
+        GradedActivity lowest = null;
+        for (GradedActivity gradedActivity : grades) {
+            if (gradedActivity.getScore() < lowest.getScore()) {
+                lowest = gradedActivity;
+            }
+        }
+        return lowest;
     }
 }
