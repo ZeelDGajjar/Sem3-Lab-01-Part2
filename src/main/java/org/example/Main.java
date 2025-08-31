@@ -3,7 +3,7 @@ package org.example;
 import java.util.Scanner;
 
 /**
- *
+ * https://github.com/ZeelDGajjar/Sem3-Lab-01-Part2.git
  * @author 2474008
  */
 public class Main {
