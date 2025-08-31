@@ -40,6 +40,6 @@ public class Essay extends GradedActivity {
     }
 
     public double getScore() {
-        return super.getscore();
+        return super.getScore();
     }
 }

@@ -18,7 +18,7 @@ public class Main {
 
         FinalExam exam1 = new FinalExam(finalScore, numQuestions);
         System.out.printf("Each question counts %.1f points. \n", exam1.getPointsEach());
-        System.out.printf("The exam score is %.1f \n", exam1.getscore());
+        System.out.printf("The exam score is %.1f \n", exam1.getScore());
         System.out.printf("The exam grade is %s \n", exam1.getGrade());
 
         //------- Task 3 --------
@@ -31,7 +31,7 @@ public class Main {
 
         PassFailExam exam2 = new PassFailExam(finalScore1, numQuestions1, minScore);
         System.out.printf("Each question counts %.1f points. \n", exam2.getPointsEach());
-        System.out.printf("The exam score is %.1f \n", exam2.getscore());
+        System.out.printf("The exam score is %.1f \n", exam2.getScore());
         System.out.printf("The exam grade is %s \n", exam2.getGrade());
 
         //------- Task 4 --------
@@ -47,10 +47,18 @@ public class Main {
 
         Essay essay = new Essay();
         essay.setScore(grammerPts, spellingPts, lengthPts, contentPts);
-        System.out.print("Total points: " + essay.getscore() + "\n");
+        System.out.print("Total points: " + essay.getScore() + "\n");
         System.out.print("Grade: " + essay.getGrade());
 
         //------- Task 5 --------
+        CourseGrades courseGrades = new CourseGrades();
+        GradedActivity gradedActivity = new GradedActivity();
+        gradedActivity.setScore(essay.getScore());
 
+        courseGrades.setEssay(essay);
+        courseGrades.setFinalExam(exam1);
+        courseGrades.setPassFail(exam2);
+        courseGrades.setLab(gradedActivity);
+        System.out.println(courseGrades.toString());
     }
 }

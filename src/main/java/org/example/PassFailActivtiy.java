@@ -8,6 +8,6 @@ public class PassFailActivtiy extends GradedActivity {
     }
 
     public char getGrade() {
-        return (getscore() >= minPassingScore ? 'P' : 'F');
+        return (getScore() >= minPassingScore ? 'P' : 'F');
     }
 }

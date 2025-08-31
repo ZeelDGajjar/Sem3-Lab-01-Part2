@@ -28,9 +28,20 @@ public class CourseGrades {
 
     @Override
     public String toString() {
-        return "Lab Score: " + grades[0].getscore() + "%5s Grade: " + grades[0].getGrade()
-                + "\nPass/Fail Exam Score: " + grades[1].getscore() + "Grade: " + grades[0].getGrade()
-                + "\nEssay Score:" + grades[2].getscore() + "Grade: " + grades[2].getGrade()
-                + "\nFinal Exam Score:" + grades[3].getscore() + "Grade: " + grades[3].getGrade();
+        StringBuilder sb = new StringBuilder();
+
+        sb.append(String.format("\n%-5s %-12.1fGrade: %s%n",
+                "Lab Score:", grades[0].getScore(), grades[0].getGrade()));
+
+        sb.append(String.format("%-5s %-8.1fGrade: %s%n",
+                "Pass/Fail Exam Score:", grades[1].getScore(), grades[1].getGrade()));
+
+        sb.append(String.format("%-5s %-10.1fGrade: %s%n",
+                "Essay Score:", grades[2].getScore(), grades[2].getGrade()));
+
+        sb.append(String.format("%-5s %-5.1fGrade: %s%n",
+                "Final Exam Score:", grades[3].getScore(), grades[3].getGrade()));
+
+        return sb.toString();
     }
 }

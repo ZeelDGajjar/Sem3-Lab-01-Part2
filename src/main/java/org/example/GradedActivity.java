@@ -21,7 +21,7 @@ public class GradedActivity {
         this.score = s;
     }
     
-    public double getscore() {
+    public double getScore() {
         return this.score;
     }
     
