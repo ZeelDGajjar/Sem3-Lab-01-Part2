@@ -56,7 +56,7 @@ public class CourseGrades implements Analyzable {
 
     @Override
     public GradedActivity getHighest() {
-        GradedActivity highest = null;
+        GradedActivity highest = new GradedActivity();
         for (GradedActivity gradedActivity : grades) {
             if (gradedActivity.getScore() > highest.getScore()) {
                 highest = gradedActivity;
@@ -67,7 +67,8 @@ public class CourseGrades implements Analyzable {
 
     @Override
     public GradedActivity getLowest() {
-        GradedActivity lowest = null;
+        GradedActivity lowest = new GradedActivity();
+        lowest.setScore(grades[0].getScore());
         for (GradedActivity gradedActivity : grades) {
             if (gradedActivity.getScore() < lowest.getScore()) {
                 lowest = gradedActivity;

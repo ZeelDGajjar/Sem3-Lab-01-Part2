@@ -59,6 +59,11 @@ public class Main {
         courseGrades.setFinalExam(exam1);
         courseGrades.setPassFail(exam2);
         courseGrades.setLab(gradedActivity);
-        System.out.println(courseGrades.toString());
+        System.out.print(courseGrades.toString());
+
+        //  ------- Task 6 --------
+        System.out.println("Average Score: " + courseGrades.getAverage());
+        System.out.println("Highest Score: " + courseGrades.getHighest().getScore());
+        System.out.println("Lowest Score: " + courseGrades.getLowest().getScore());
     }
 }
